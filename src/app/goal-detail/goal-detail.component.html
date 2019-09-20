@@ -1,0 +1,17 @@
+<!-- Pass values into the directive with an @Input data binding -->
+<h1>My first Attribute Directive</h1>
+<h4>Pick a highlight color</h4>
+<div>
+    <input type="radio" name="colors" (click)="color='lightgreen'">Green
+    <input type="radio" name="colors" (click)="color='yellow'">Yellow
+    <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+
+
+<p [appHighlight]='color' defaultColor='violet'>
+    {{goal.description}}
+</p>
+<p>This goal will be complete in {{goal.completeDate|dateCount}} days</p>
+
+<a class="btn btn-danger btn-rounded" (click)= 'goalDelete(true)' ripple-radius>Delete Goal</a>
+
